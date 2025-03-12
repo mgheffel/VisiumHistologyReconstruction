@@ -34,13 +34,15 @@ A 2 component neural network that first reconstructs the tissue image in pretrai
 ### Model Architecture
 - Encoder: Compresses an RGB image through four convolutional layers with ReLU and max-pooling, reducing spatial dimensions by 16x and producing a 128-channel feature map.
 - Decoder: Reconstructs the image and predicts gene expression by upsampling the latent representation through four transposed convolutional layers, outputting 3 RGB channels plus num_genes gene channels.
-- Pretraining is run only reconstructing the tissue image with no gene expression loss, then gene expression loss is included to reconstruct genes on the tissue image.
+- Pretraining is run only reconstructing the tissue image with no gene expression loss, then gene expression loss is included to reconstruct genes on the tissue image.<br>
 **Loss**<br>
 - SSIM Loss was chosen for image reconstruction as opposed to MSE because while MSE reconstructs the image with higher accuracy, when combined with gene reconstruction the image is averaged to all white pixels. The SSIM loss however is built around preserving structure and prevents the loss cheating at image reconstruction to favor gene reconstruction. 
-- Gene expression loss was calculated by averaging the gene expression across a spatial 2x2 micron square on comparing it to the true gene expression value of the spatial pseudocell. Then MSE across all.
-**Limitations**<br>
+- Gene expression loss was calculated by averaging the gene expression across a spatial 2x2 micron square on comparing it to the true gene expression value of the spatial pseudocell. Then MSE across all.<br>
+### Limitations**
 - Need histology images with protein staining to serve as ground truth for gene expression on image structures. From this a cell demultiplexing model could be added to explore how single cells are partially combined into the 2 micron pseudocells which could then be fed into a diffusion model to inflate the 2 micron squares to the higher pixel resolution of the tissue image.
 - Not explored for generalizability across datasets and tissue types.
 ### Future Direction
 - Grid search hyperparameters to explore what variations cause the model to perform best. 
 - Explore feature detection and attention based image models so the tissue structure may vary across samples and still be reconstructed with high accuracy.
+- Incoorperate several datasets to assess generalizability across sequncing batchs, tissue types, and slight variations in dissection
+- Add complexity to the gene reconstruction model (independent of spatial information)
