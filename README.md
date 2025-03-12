@@ -46,3 +46,6 @@ A 2 component neural network that first reconstructs the tissue image in pretrai
 - Explore feature detection and attention based image models so the tissue structure may vary across samples and still be reconstructed with high accuracy.
 - Incoorperate several datasets to assess generalizability across sequncing batchs, tissue types, and slight variations in dissection
 - Add complexity to the gene reconstruction model (independent of spatial information)
+
+### Exploring Structure Detection
+<img src="IMAGES/StructureDetection.png" alt="Project Logo" width="200">
