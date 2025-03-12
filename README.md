@@ -13,7 +13,7 @@ Gene Expresssion on UMAP<br>
 
 ## Explanation 
 ### The Problem
-10x Visium data is a spatial gene expression sequencer<br />
+10x Visium data is a spatial gene expression sequencer
 - data is in the form of 2x2 micron regions that are treated as cells
 - the resulting data points are gene expression values and x, y spatial coordinates
 - Associated with the coordinates is a tissue image that the coordinates correspond to.
@@ -38,7 +38,7 @@ A 2 component neural network that first reconstructs the tissue image in pretrai
 **Loss**<br>
 - SSIM Loss was chosen for image reconstruction as opposed to MSE because while MSE reconstructs the image with higher accuracy, when combined with gene reconstruction the image is averaged to all white pixels. The SSIM loss however is built around preserving structure and prevents the loss cheating at image reconstruction to favor gene reconstruction. 
 - Gene expression loss was calculated by averaging the gene expression across a spatial 2x2 micron square on comparing it to the true gene expression value of the spatial pseudocell. Then MSE across all.<br>
-### Limitations**
+### Limitations
 - Need histology images with protein staining to serve as ground truth for gene expression on image structures. From this a cell demultiplexing model could be added to explore how single cells are partially combined into the 2 micron pseudocells which could then be fed into a diffusion model to inflate the 2 micron squares to the higher pixel resolution of the tissue image.
 - Not explored for generalizability across datasets and tissue types.
 ### Future Direction
