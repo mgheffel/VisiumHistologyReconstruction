@@ -1,2 +1,2 @@
-# VisiumHistologyReconstruction
- Quick build attempting to reconstruct 2x2 micron pseudocell gene expression onto a higher resolutino tissue image
+# VisumHistologyReconstruction
+ A quick attemp to project spatial gene expression profiles onto tissue images as if it were a protein immunofluorescence imaging

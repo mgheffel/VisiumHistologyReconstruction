@@ -1,0 +1,6 @@
+# ignore ALL .log files
+*.log
+
+# ignore ALL files in ANY directory named DATA, ARCHIVE, or figures (scanpy figure dump)
+DATA/
+.ipynb_checkpoints/
