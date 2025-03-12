@@ -22,7 +22,7 @@ Gene Expresssion on UMAP<br>
 - Can we generate a gene expression profile on top of the tissue image?
 
 ### The Approach 
-A 2 component neural network that first reconstructs the tissue image in pretrainin using a convolutional neural network, then assigns gene expression values to every pixel as an extension of the final convolutional layer.<br>
+A 2 component neural network that first reconstructs the tissue image in pretraining using a convolutional neural network, then assigns gene expression values to every pixel as an extension of the final convolutional layer.<br>
 **Data Preparation**
 - Collected 2 Visium mouse brain datasets. Each dataset was preprocessed by removing cells with < 200 genes and removing genes expressed in less than 3 cells. Cells with total counts>30000 were also removed and then cell expression counts were normalized to a total of 10,000. <br>
 **Exploration**<br>
