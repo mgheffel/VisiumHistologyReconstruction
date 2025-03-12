@@ -5,11 +5,11 @@
 Reconstructed Tissue Image<br>
 <img src="IMAGES/image_recon.png" alt="Project Logo" width="200">  <br>
 Gene Expression Projected onto tissue image<br>
-<img src="IMAGES/gex_recon.png" alt="Project Logo" width="600">  <br>
+<img src="IMAGES/gex_recon.png" alt="Project Logo" width="800">  <br>
 True Gene Expression<br>
-<img src="IMAGES/gex_true.png" alt="Project Logo" width="600">  <br>
+<img src="IMAGES/gex_true.png" alt="Project Logo" width="800">  <br>
 Gene Expresssion on UMAP<br>
-<img src="IMAGES/gex_leiden.png" alt="Project Logo" width="600">
+<img src="IMAGES/gex_leiden.png" alt="Project Logo" width="800">
 
 ## Explanation 
 ### The Problem
@@ -48,4 +48,4 @@ A 2 component neural network that first reconstructs the tissue image in pretrai
 - Add complexity to the gene reconstruction model (independent of spatial information)
 
 ### Exploring Structure Detection
-<img src="IMAGES/StructureDetection.png" alt="Project Logo" width="200">
+<img src="IMAGES/StructureDetection.png" alt="Project Logo" width="800">
